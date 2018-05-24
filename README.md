@@ -4,9 +4,9 @@
 
 ### Features
 
-_ Real time chat engine for comments
-_ Blog
-_ Porfolio
-_ Drag on Drop Interface
+- Real time chat engine for comments
+- Blog
+- Porfolio
+- Drag on Drop Interface
 
 
