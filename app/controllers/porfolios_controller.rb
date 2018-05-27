@@ -2,6 +2,7 @@ class PorfoliosController < ApplicationController
     def index
     @porfolio_items = Porfolio.all 
     end
+    
     def new
     @porfolio_items = Porfolio.new
     end
@@ -32,6 +33,10 @@ class PorfoliosController < ApplicationController
         format.html { render :edit }
       end
     end
+    end
+    
+    def show
+    @porfolio_item = Porfolio.find(params[:id])    
     end
 
 end
