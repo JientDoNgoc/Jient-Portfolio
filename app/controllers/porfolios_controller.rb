@@ -39,4 +39,13 @@ class PorfoliosController < ApplicationController
     @porfolio_item = Porfolio.find(params[:id])    
     end
 
+    def destroy
+    @porfolio_item = Porfolio.find(params[:id])
+    
+    @porfolio_item.destroy
+        respond_to do |format|
+          format.html { redirect_to porfolios_path, notice: 'Your portfolio item successfully destroyed.' }
+          format.json { head :no_content }
+        end
+    end
 end
