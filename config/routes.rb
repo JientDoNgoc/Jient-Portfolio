@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  resources :porfolios
-  get 'pages/home'
+  resources :porfolios, except: [:show]
+  get 'porfolio/:id', to: 'porfolios#show', as: :'porfolio_show'
+    
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
 
-  get 'pages/about'
-
-  get 'pages/contact'
-
-  resources :blogs
+  resources :blogs do 
+    member do 
+      get :toggle_status
+    end
+  end
   
+  root 'pages#home', as: :home
 end
