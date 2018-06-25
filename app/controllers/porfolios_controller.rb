@@ -13,8 +13,7 @@ class PorfoliosController < ApplicationController
     end
     
     def create
-    @porfolio_items = Porfolio.new(params.require(:porfolio).permit(:title, :subtitle, :body, 
-    technologies_attributes: [:name]))
+    @porfolio_items = Porfolio.new(porfolio_params)
 
     respond_to do |format|
       if @porfolio_items.save
@@ -33,7 +32,7 @@ class PorfoliosController < ApplicationController
     @porfolio_item = Porfolio.find(params[:id])    
 
     respond_to do |format|
-      if @porfolio_item.update(params.require(:porfolio).permit(:title, :subtitle, :body))
+      if @porfolio_item.update(porfolio_params)
         format.html { redirect_to porfolios_path, notice: 'Your portfolio item was successfully updated.' }
       else
         format.html { render :edit }
@@ -54,4 +53,11 @@ class PorfoliosController < ApplicationController
           format.json { head :no_content }
         end
     end
+    
+    private 
+    def porfolio_params
+      params.require(:porfolio).permit(:title, :subtitle, :body, 
+          technologies_attributes: [:name])
+    end
+  
 end
