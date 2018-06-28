@@ -58,4 +58,4 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
 #My view tool gem 
-gem 'jient_view_tool', git: 'https://github.com/JientDoNgoc/jient_view_tool'
+gem 'jient_view_tool', '~> 0.1.0'
