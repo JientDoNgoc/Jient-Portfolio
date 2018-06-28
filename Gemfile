@@ -59,3 +59,6 @@ gem 'jquery-rails'
 
 #My view tool gem 
 gem 'jient_view_tool', '~> 0.1.0'
+
+#authorization
+gem 'petergate', '~> 1.8', '>= 1.8.1'
