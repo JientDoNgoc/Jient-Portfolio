@@ -14,9 +14,9 @@
     
     <%= render "shared/nav", location: 'top' %>
     
-    <%= login_helper %>
-    
     <%= yield %>
+    
+    <%= render "shared/application_footer" %>
     
     <%= source_helper("porfolio") %>
   </body>
