@@ -5,5 +5,5 @@
 <p><%= porfolio_item.body %></p>
 
 <%= image_tag porfolio_item.thumb_image unless porfolio_item.thumb_image.nil? %>
-<%= link_to "edit", edit_porfolio_path(porfolio_item.id) %>
-<%= link_to "delete portfolio item", porfolio_path(porfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to "edit", edit_porfolio_path(porfolio_item.id) if logged_in?(:site_admin) %>
+<%= link_to "delete portfolio item", porfolio_path(porfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>

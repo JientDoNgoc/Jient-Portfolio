@@ -1,3 +1,5 @@
 <h3>Portfolio Items</h3>
 
+<%= link_to "Create New Item", new_porfolio_url if logged_in?(:site_admin) %>
+
 <%= render partial: 'porfolio_item', collection: @porfolio_items %>
