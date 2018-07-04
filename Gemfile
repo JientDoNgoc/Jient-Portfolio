@@ -56,8 +56,10 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 #Bootstrap 
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
-
+#icon 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+#pagination
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 #My view tool gem 
 gem 'jient_view_tool', '~> 0.1.0'
