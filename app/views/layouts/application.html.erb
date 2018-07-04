@@ -13,15 +13,15 @@
   <body>
     <div id="#MainWrapper">
 
-          <%= render "shared/application_nav" %>
+      <%= render "shared/application_nav" %>
 
-          <div id="content" class="container" >
-            <%= yield %>
-          </div>
+      <div id="content" class="container" >
+        <%= yield %>
+      </div>
 
-          <%= render "shared/application_footer" %>
-          
-          <%= source_helper("application") %>
+      <%= render "shared/application_footer" %>
+      
+      <%= source_helper("application") %>
     </div>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>

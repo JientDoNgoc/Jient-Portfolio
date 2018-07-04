@@ -122,8 +122,10 @@ ul{
  * Cover
  */
 
-.cover {
+#content {
   padding: 0 1.5rem;
+  min-height: 500px;
+  height: auto;
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
@@ -134,7 +136,11 @@ ul{
 /*
  * Footer
  */
-
+.copy-section{
+  padding-bottom: 0;
+  margin: 2em 0;
+  float: bottom;
+}
 
 
 /*
@@ -153,4 +159,8 @@ ul{
 
 .auth-links a {
   color: black;
+}
+
+.register-text{
+  text-align: right;
 }
