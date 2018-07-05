@@ -1,9 +1,6 @@
-<p><%= link_to porfolio_item.title, porfolio_show_path(porfolio_item.id) %></p>
-
-<p><%= porfolio_item.subtitle %></p>
-
-<p><%= porfolio_item.body %></p>
-
-<%= image_tag porfolio_item.thumb_image unless porfolio_item.thumb_image.nil? %>
-<%= link_to "edit", edit_porfolio_path(porfolio_item.id) if logged_in?(:site_admin) %>
-<%= link_to "delete portfolio item", porfolio_path(porfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+<div class="card">
+  <%= image_tag porfolio_item.thumb_image unless porfolio_item.thumb_image.nil? %>
+  <p class="card-text">
+    <span><%= link_to porfolio_item.title, porfolio_show_path(porfolio_item) %></span> <%= porfolio_item.subtitle %>
+  </p>
+</div>
