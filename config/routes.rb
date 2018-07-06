@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     sign_up: 'register'
   }
   
-  resources :porfolios, except: [:show]
+  resources :porfolios, except: [:show] do 
+    put :sort , on: :collection
+  end     
   get 'angular-items', to: 'porfolios#angular'
   
   get 'porfolio/:id', to: 'porfolios#show', as: :'porfolio_show'
