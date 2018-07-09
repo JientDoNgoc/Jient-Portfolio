@@ -67,3 +67,10 @@ gem 'jient_view_tool', '~> 0.1.0'
 
 #authorization
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+
+#upload files
+gem 'carrierwave', '~> 1.2', '>= 1.2.3'
+gem 'dotenv-rails', '~> 2.5'
+
+#upload files to 
+gem 'carrierwave-aws', '~> 1.3'

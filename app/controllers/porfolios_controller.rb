@@ -24,7 +24,7 @@ class PorfoliosController < ApplicationController
     
     def create
     @porfolio_items = Porfolio.new(porfolio_params)
-
+    
     respond_to do |format|
       if @porfolio_items.save
         format.html { redirect_to porfolios_path, notice: 'Porfolio item is now live.' }
@@ -66,8 +66,12 @@ class PorfoliosController < ApplicationController
     
     private 
     def porfolio_params
-      params.require(:porfolio).permit(:title, :subtitle, :body, 
-          technologies_attributes: [:name])
+      params.require(:porfolio).permit(:title, 
+                                       :subtitle,
+                                       :body,
+                                       :main_image,
+                                       :thumb_image,
+                                       technologies_attributes: [:name])
     end
   
 end
