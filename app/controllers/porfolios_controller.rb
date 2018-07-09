@@ -24,7 +24,7 @@ class PorfoliosController < ApplicationController
     
     def create
     @porfolio_items = Porfolio.new(porfolio_params)
-
+    
     respond_to do |format|
       if @porfolio_items.save
         format.html { redirect_to porfolios_path, notice: 'Porfolio item is now live.' }

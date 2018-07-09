@@ -21,3 +21,5 @@
 
 # I dont want to show my secrets
 /config/secrets.yml 
+.env
+My rails app-593389a8d56f.json
