@@ -74,3 +74,5 @@ gem 'dotenv-rails', '~> 2.5'
 
 #upload files to 
 gem 'carrierwave-aws', '~> 1.3'
+
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
