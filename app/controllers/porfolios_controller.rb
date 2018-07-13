@@ -22,10 +22,10 @@ class PorfoliosController < ApplicationController
     end
     
     def create
-    @porfolio_items = Porfolio.new(porfolio_params)
+    @porfolio_item = Porfolio.new(porfolio_params)
     
     respond_to do |format|
-      if @porfolio_items.save
+      if @porfolio_item.save
         format.html { redirect_to porfolios_path, notice: 'Porfolio item is now live.' }
       else
         format.html { render :new }
