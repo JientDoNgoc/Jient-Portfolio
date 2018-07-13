@@ -1,7 +1,7 @@
 <%= form_for(@porfolio_item) do |f| %>
   <% if @porfolio_item.errors.any? %>
     <% @porfolio_item.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, title: "Jient DoNgoc Portfolio", sticky: false) %>
+      <%= alert_generator error %>
     <% end %>
   <% end %>
 
