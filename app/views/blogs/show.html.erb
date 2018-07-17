@@ -7,7 +7,7 @@
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
 
   <p>
-    <%= @blog.body %>
+    <%= markdown @blog.body %>
   </p>
   <h5>Comment</h5>
   <div id="comments" data-blog-id="<%= @blog.id %>">
