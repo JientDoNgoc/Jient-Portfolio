@@ -1,6 +1,8 @@
-<div class="card" data-id=<%= porfolio_item.id %>>
-  <%= image_tag porfolio_img(porfolio_item.thumb_image, 'thumb') %>
-  <p class="card-text">
-    <span><%= link_to porfolio_item.title, porfolio_show_path(porfolio_item) %></span> <%= porfolio_item.subtitle %>
-  </p>
+<div class="col-md-4">
+  <div class="card" data-id="<%= porfolio_item.id %>">
+    <%= image_tag porfolio_img(porfolio_item.thumb_image, 'thumb'), width: '100%' %>
+    <p class="card-text">
+      <span><%= link_to porfolio_item.title, porfolio_show_path(porfolio_item) %></span> <%= porfolio_item.subtitle %>
+    </p>
+  </div>
 </div>
