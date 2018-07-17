@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount ActionCable.server => '/cable'
   devise_for :users, path: '', path_names:
   {
     sign_in: 'login',
@@ -23,6 +22,8 @@ Rails.application.routes.draw do
       get :toggle_status
     end
   end
+  
+  mount ActionCable.server => '/cable'
   
   root 'pages#home', as: :home
 end
