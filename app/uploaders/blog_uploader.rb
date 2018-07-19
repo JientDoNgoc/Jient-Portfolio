@@ -1,4 +1,4 @@
-class PorfolioUploader < CarrierWave::Uploader::Base
+class BlogUploader < CarrierWave::Uploader::Base
   storage :aws
 
   def store_dir
@@ -8,5 +8,4 @@ class PorfolioUploader < CarrierWave::Uploader::Base
   def extension_whitelist
     %w(jpg jpeg gif png)
   end
-
 end

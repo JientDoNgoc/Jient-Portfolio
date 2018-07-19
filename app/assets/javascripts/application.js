@@ -18,6 +18,10 @@
 //= require html.sortable
 //= require cocoon
 //= require gritter
+//= require lib/typed
+//= require typed-implementation
+//= require typed-blog
 //= require cable
+//= require ckeditor/init
 //= require turbolinks
 //= require_tree .

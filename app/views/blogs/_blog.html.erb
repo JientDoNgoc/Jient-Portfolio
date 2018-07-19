@@ -1,10 +1,11 @@
-<div class="blog-post">
-  <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
+<div class="blog-post blog-body">
+  <h4 class="blog-post-title"><%= link_to blog.title, blog %></h4>
   <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
-  
+  <%= image_tag blog_img(blog.thumb_img, 'thumb-img'), width: '100%' %>
   <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
 
   <p>
-    <%= blog.body %>
+    <%= blog.post_review %></br>
+    <%= link_to "Continue reading", blog %>
   </p>
 </div>
