@@ -22,6 +22,7 @@ module JientPorfolio
     config.load_defaults 5.1
     config.generators.javascript_engine = :js
     config.eager_load_paths << "#{Rails.root}/lib"
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
     config.generators.system_tests = nil
   end
 end
